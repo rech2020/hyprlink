@@ -19,10 +19,9 @@ async def on_ready():
 @bot.event
 async def on_message(message):
     if message.channel.id==testingchannel:
-        timestamp=message.created_at.strftime('%H:%M')
         nickname=message.author.display_name
         username=message.author.name
-        await outputchannel.send(f"`[{timestamp}] {nickname} ({username}):` {message.content}")
+        await outputchannel.send(f"`{nickname} ({username}):`/n {message.content}")
 
 bot.run(
         open("discordtoken.txt").read(), 

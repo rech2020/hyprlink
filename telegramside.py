@@ -35,7 +35,7 @@ async def echo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     firstname = sender.first_name if sender.first_name != None else ""
     lastname = sender.last_name if sender.last_name != None else ""
     try:
-        await context.bot.send_message(chat_id=-1002374958503, text=f"`[{message.date.strftime('%H:%M')}] {firstname} {lastname} ({sender.username}):` {message.text}", parse_mode='MarkdownV2')
+        await context.bot.send_message(chat_id=-1002374958503, text=f"`{firstname} {lastname} ({sender.username}):` {message.text}", parse_mode='MarkdownV2')
         logging.info("Message sent successfully")
     except Exception as e:
         logging.error(f"Failed to send message: {str(e)}")
