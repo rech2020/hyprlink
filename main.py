@@ -1,1 +1,4 @@
-# i sure do hope i wont forget to actually make this because im being forced to go to sleep currently
+import subprocess
+
+subprocess.Popen('python telegramside.py')
+subprocess.Popen('python discordside.py')
