@@ -21,7 +21,7 @@ async def on_message(message):
     if message.channel.id==testingchannel:
         nickname=message.author.display_name
         username=message.author.name
-        await outputchannel.send(f"`{nickname} ({username}):`/n {message.content}")
+        await outputchannel.send(f"`{nickname} ({username}):`\n {message.content}")
 
 bot.run(
         open("discordtoken.txt").read(), 
